@@ -8,11 +8,14 @@
     "format": "npm run format:eslint && npm run format:prettier",
     "build": "rimraf dist && tsc && rollup -c rollup.config.js",
     "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
-    "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --app-index index.html --node-resolve --open --watch\"",
+    "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"npm run analyse:watch\" \"web-dev-server --app-index index.html --node-resolve --open --watch\"",
     "tsc:watch": "tsc --watch",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "analyse": "custom-elements-manifest analyze --litelement --outdir dist --globs \"src/**/*.ts\"",
+    "analyse:watch": "custom-elements-manifest analyze --litelement --outdir dist --globs \"src/**/*.ts\" --watch"
   },
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.6.3",
     "@open-wc/building-rollup": "^2.0.1",
     "@open-wc/eslint-config": "^7.0.0",
     "@rollup/plugin-replace": "^4.0.0",
@@ -62,6 +65,7 @@
   "type": "module",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^13.2.1",
+    "api-viewer-element": "^1.0.0-pre.3",
     "lit": "^2.2.3"
   }
 }
