@@ -5,7 +5,7 @@ import { customElement, property } from 'lit/decorators.js';
 export class HelloWorld extends LitElement {
   static styles = css`
     p {
-      color: green;
+      color: var(--hw-color, green);
     }
   `;
 
