@@ -6,7 +6,7 @@
     "format:prettier": "prettier \"**/*.js\" \"**/*.ts\" --write --ignore-path .gitignore",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
-    "build": "vite build . && npm run analyse",
+    "build": "vite build && npm run analyse",
     "start": "vite && npm run analyse:watch",
     "tsc:watch": "tsc --watch",
     "prepare": "husky install",
@@ -26,8 +26,7 @@
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "typescript": "^4.6.4",
-    "vite": "^3.0.9",
-    "vite-plugin-chunk-split": "^0.2.7"
+    "vite": "^3.0.9"
   },
   "eslintConfig": {
     "extends": [
