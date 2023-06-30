@@ -1,5 +1,4 @@
-import { defineConfig } from 'vite';
-import { splitVendorChunkPlugin } from 'vite'
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,10 +6,8 @@ export default defineConfig({
     lib: {
       entry: 'src/hello-world.ts',
       name: 'HelloWorld',
-      fileName: 'hello-world'
-    }
+      fileName: 'hello-world',
+    },
   },
-  plugins: [
-    splitVendorChunkPlugin(),
-  ],
+  plugins: [splitVendorChunkPlugin()],
 });
