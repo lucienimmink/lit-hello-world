@@ -14,7 +14,7 @@
     "analyse:watch": "custom-elements-manifest analyze --litelement --outdir dist --globs \"src/**/*.ts\" --watch"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.6.3",
+    "@custom-elements-manifest/analyzer": "^0.8.0",
     "@open-wc/eslint-config": "^12.0.0",
     "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
