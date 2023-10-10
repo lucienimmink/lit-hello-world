@@ -58,7 +58,7 @@
   "dependencies": {
     "@lit-labs/motion": "^1.0.4",
     "api-viewer-element": "^1.0.0-pre.3",
-    "lit": "^2.2.3"
+    "lit": "^3.0.0"
   },
   "volta": {
     "node": "20.8.0",
